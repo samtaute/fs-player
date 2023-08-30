@@ -20,7 +20,6 @@ export const SoftboxContextProvider: React.FC<{
   const [data, setData] = useState({} as any);
   const [pages, setPages] = useState([] as any); 
   const createPages = useCallback((data: any) => {
-    console.log(data);
     let pages = [];
     for (const look of data.lookbook.looks) {
       pages.push(createCoverPage(look.images[0]["url"]));

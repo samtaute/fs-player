@@ -1,4 +1,3 @@
-import styles from "./Player.module.css";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import SoftboxContext from "../store/softbox-context";
@@ -24,7 +23,7 @@ const Player: React.FC = () => {
   }
 
   return (
-    <div onClick={incrementIndex} className={`${styles.player}`}>
+    <div onClick={incrementIndex} className='player'>
       {ctx.pages[index]}
     </div>
   );
