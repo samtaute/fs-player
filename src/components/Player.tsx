@@ -7,7 +7,6 @@ const Player: React.FC = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const id = urlParams.get("uid");
-  console.log(id);
 
   const ctx = useContext(SoftboxContext);
 
@@ -23,8 +22,9 @@ const Player: React.FC = () => {
   }
 
   return (
-    <div onClick={incrementIndex} className='player'>
+    <div onClick={incrementIndex} id='player'>
       {ctx.pages[index]}
+      <div className='invisible'>{ctx.pages[index+1]}</div>
     </div>
   );
 };
