@@ -1,5 +1,21 @@
 /* Player */
-.player {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Nunito+Sans:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.invisible{
+  display: none; 
+}
+
+#player {
   height: 100vh;
   width: 100vw;
   max-width: 75vh;
@@ -11,54 +27,85 @@
 }
 /* Page */
 .slide-container {
-    width: 100%;
-    height: 100%;
-    background-color: #0a0a0a;
-  }
-  
-  .background-image {
-    /* position: absolute; */
-    object-fit: cover;
-    width: 100%;
-    height: 65%;
-  }
-  
-  .gradient-overlay {
-    position: absolute;
-    height: 25%;
-    width: 100%;
-    background: linear-gradient(0deg, #0a0a0a 0%, rgba(10, 10, 10, 0) 100%);
-    top: 40%;
-  }
-  .title {
-    position: absolute;
-    width: 320px; 
-    top: 60%;
-    left: 5%;
-    color: #fff;
-    font-feature-settings: "clig" off, "liga" off;
-    text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-    font-family: Nunito Sans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40px; /* 125% */
-  }
-  
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+}
 
+.image-section {
+  width: 100%;
+  min-height: 50%;
+  flex-grow: 1;
+  position: relative;
+}
+.background-image {
+  /* position: absolute; */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* min-height: 50%;
+  flex-grow: 1;  */
+}
+
+
+.gradient-overlay {
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  margin-top: -5rem;
+  background: linear-gradient(0deg, #0a0a0a 0%, rgba(10, 10, 10, 0) 100%);
+}
 
 .text-section {
   display: flex;
-  flex-grow: 1;
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.title {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+  font-family: Nunito Sans;
+  font-size: 1.8rem; 
+  font-style: normal;
+  font-weight: 700;
+  padding: 0.2rem 1rem;
+  z-index: 10;
+  margin-top: -3rem;
+  /* line-height: 40px; 125% */
+}
+
+.svg{
+  position: absolute;  
+  width: 100%; 
+  top: 0; 
 }
 
 .description {
   color: var(--neutral-70, #d3d3d3);
   font-feature-settings: "clig" off, "liga" off;
   font-family: Noto Sans;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-  padding: .2rem 1rem;
+  line-height: 1.5rem;
+  padding: 0.2rem 1rem;
+}
+.cta {
+  color: var(--neutral-70, #d3d3d3);
+  /* Label L */
+  font-family: Noto Sans; 
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  /* line-height: 20px; 125% */
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
 }
