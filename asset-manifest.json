@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fs-player/static/css/main.f1334054.css",
+    "main.js": "/fs-player/static/js/main.9a3ecced.js",
+    "index.html": "/fs-player/index.html",
+    "main.f1334054.css.map": "/fs-player/static/css/main.f1334054.css.map",
+    "main.9a3ecced.js.map": "/fs-player/static/js/main.9a3ecced.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1334054.css",
+    "static/js/main.9a3ecced.js"
+  ]
+}
