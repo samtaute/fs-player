@@ -16,7 +16,7 @@ const CoverPage: React.FC<{
   const [width, setWidth] = useState(0);
   const [frameHeight, setFrameHeight] = useState(0);
   const [frameWidth, setFrameWidth] = useState(0);
-  
+
   function updateDimensions() {
     if (
       !elRef.current?.clientHeight ||
@@ -84,7 +84,7 @@ const CoverPage: React.FC<{
       <div className="text-section">
         <div className="gradient-overlay"></div>
         <div className="title">{lookbookData.title["en"]}</div>
-        <div className="description">{lookbookData.summary["en"]}</div>
+        <div className="description description-cover">{lookbookData.summary["en"]}</div>
         <div className="cta">
           READ THE STORY
           <svg
