@@ -54,7 +54,8 @@ export const SoftboxContextProvider: React.FC<{
       summary,
       imageUrl,
     }
-    return <PlanPage data={pageData} key={imageUrl}></PlanPage>
+    // return <PlanPage data={pageData} key={imageUrl}></PlanPage>
+    return <div></div>
   }
   function createCover(coverUID: string, data: lookbook) {
     const look = data.looks.find((look)=>{return look.uid === coverUID })

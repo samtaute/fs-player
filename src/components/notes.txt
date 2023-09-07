@@ -1,0 +1,19 @@
+nextPage: 
+1. this.index += 1 
+2. preloadImages(this.index)
+3. newpage(thisIndex)
+
+preloadImages
+1. 
+
+newPage: 
+ 1. location.replace("#" + (index+1))
+ 2. resetPageAnimation: remove animate class from any elements with 'animate' class. 
+ 3. resetPages(index): reset all pages to starting transformation. 
+ 4. paginationUpdate(index): Update the pagination dot.
+ 5. refreshAd(index): Refresh ad
+ 6. setPageHeight(index): set height of container needs to be taller for recirc page.
+ 7. setPagePosition(index): Animate the left boundary. (swipe function?)
+ 8. updateArrows(index): enable and diable next and prev arrows based on position.
+ 9. animateKB(index): apply end ken burns tranform to each pane in image.   
+ 10. logNewPage() // push page event to GTM.

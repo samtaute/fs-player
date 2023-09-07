@@ -63,10 +63,31 @@ export interface View {
   panes: Pane[];
 }
 
+export interface kenBurnsParam{
+  startX: number, 
+  startY: number, 
+  startB: number, 
+  endX: number, 
+  endY: number,
+  endB: number,
+}
+
+export type kenBurnsParamKey = '0:0'|'1:1'|'1:3'|'3:1'|'4:3'|'9:4'
+
+export interface kenBurnsParams{
+  "0:0": kenBurnsParam,
+  "1:1": kenBurnsParam,
+  "1:3": kenBurnsParam,
+  "3:1": kenBurnsParam,
+  "3:4": kenBurnsParam, 
+  "4:3": kenBurnsParam,
+  "9:4": kenBurnsParam
+}
 export interface Look{
     uid: string,
     title: string,
     averageColor: string,
+    kenBurnsParams:kenBurnsParams,
     previewParams:{
         '1:1': {
             centerX: number,
@@ -95,8 +116,8 @@ export interface Look{
 }
 
 export interface Image{
-    height: string,
-    width: string,
+    height: number,
+    width: number,
     url: string
 }
 export interface Pane {
