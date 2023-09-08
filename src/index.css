@@ -1,5 +1,5 @@
 /* Player */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Nunito+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Nunito+Sans:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +11,8 @@
   justify-content: center;
   width: 100%;
 }
-.invisible{
-  display: none; 
+.invisible {
+  display: none;
 }
 
 #player {
@@ -35,8 +35,8 @@
   flex-direction: column;
 }
 
-.slide-container--plan{
-  background: #0A0A0A;
+.slide-container--plan {
+  background: #0a0a0a;
 }
 
 .image-section {
@@ -50,11 +50,10 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-bottom: 1px solid black; 
+  border-bottom: 1px solid black;
   /* min-height: 50%;
   flex-grow: 1;  */
 }
-
 
 .gradient-overlay {
   position: absolute;
@@ -64,11 +63,11 @@
   background: linear-gradient(0deg, #0a0a0a 0%, rgba(10, 10, 10, 0) 100%);
 }
 
-.gradient-overlay--plan{
-  background: linear-gradient(0deg, #403E3A 28.44%, rgba(64, 62, 58, 0.00) 98%);
+.gradient-overlay--plan {
+  background: linear-gradient(0deg, #403e3a 28.44%, rgba(64, 62, 58, 0) 98%);
 }
-.description-cover{
-  margin-bottom: .4rem;
+.description-cover {
+  margin-bottom: 0.4rem;
 }
 
 .text-section {
@@ -78,17 +77,21 @@
   max-height: 40%;
 }
 
-.text-section--plan{
+.text-section--plan {
   max-height: 25%;
-  background: linear-gradient(180deg, #403E3A 0%, #121212 100%);
+  background: linear-gradient(180deg, #403e3a 0%, #121212 100%);
 }
 
-.scroll-up{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 40%, rgba(0, 0, 0, 0.00) 100%);
-  display: flex; 
+.scroll-up {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
   width: 100%;
   position: absolute;
-  bottom: 8px;
+  bottom: 0px;
   justify-content: center;
 }
 
@@ -97,7 +100,7 @@
   font-feature-settings: "clig" off, "liga" off;
   text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   font-family: Nunito Sans;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
   padding: 0.2rem 1rem;
@@ -106,10 +109,10 @@
   /* line-height: 40px; 125% */
 }
 
-.svg{
-  position: absolute;  
-  width: 100%; 
-  top: 0; 
+.svg {
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .description {
@@ -123,10 +126,10 @@
   padding: 0.2rem 1rem;
   overflow: scroll;
 }
-.cta {
+.cta-readstory {
   color: var(--neutral-70, #d3d3d3);
   /* Label L */
-  font-family: Noto Sans; 
+  font-family: Noto Sans;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
@@ -138,30 +141,64 @@
   padding-right: 0.5rem;
 }
 
-.ad-container{
-  display: flex; 
-  width: 100%; 
+.ad-container {
+  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
-.banner-ad{
+.banner-ad {
   width: 360px;
   height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black; 
-  background-color: #e5fad9;
-
+  color: black;
 }
 
-.display-ad{
+.display-ad {
   width: 360px;
   height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black; 
-  background-color: #e5fad9;
+  color: black;
+}
 
+h1 {
+  font-family: Nunito Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+hr{
+  width: 2rem;
+}
+
+p.credit {
+  font-style: italic;
+  font-size:90%;
+  margin-bottom:0px;
+}
+
+.textpane .cta-container {
+  padding: 5px 0px 8px 0px;
+  margin: 0px;
+}
+
+.cta {
+  text-decoration: none;
+  /* background-color: white; */
+  background: var(--neutral-100, #FFF);
+
+  padding: 8px 10px 8px 10px;
+  color: black;
+  font-weight: bold;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 8px;
 }

@@ -29,7 +29,8 @@ function App() {
   //create an array of pages. This function runs once.
   useEffect(() => {
     async function fetchData(id: string) {
-      const requestUrl = `https://fotoscapes.com/wp/v1/lookbook/${lookbookId}?ckey=733053ec7939379e`;
+      
+      const requestUrl = `https://fotoscapes.com/wp/v1/lookbook/${lookbookId}?ckey=733053ec7939379e&tf=md`;
       try {
         const response = await fetch(requestUrl);
         if (!response.ok) {

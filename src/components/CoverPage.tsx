@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import FrameOverlay from "./layout/FrameOverlay";
 import KbImage from "./KbImage";
+import bannerAd from '../assets/bannerAd.png'
 
 const CoverPage: React.FC<{
   lookbookData: lookbook;
@@ -85,7 +86,7 @@ const CoverPage: React.FC<{
         <div className="gradient-overlay"></div>
         <div className="title">{lookbookData.title["en"]}</div>
         <div className="description description-cover">{lookbookData.summary["en"]}</div>
-        <div className="cta">
+        <div className="cta-readstory">
           READ THE STORY
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +104,7 @@ const CoverPage: React.FC<{
           </svg>
         </div>
         <div className="ad-container">
-            <div className="banner-ad">360 x 50</div>
+            <div className="banner-ad"><img src={bannerAd} alt='banner ad'/></div>
           </div>
       </div>
     </motion.div>

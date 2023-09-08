@@ -2,6 +2,9 @@ import { View, lookbook } from "../definition";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import KbImage from "./KbImage";
+import {parseParagraphs} from '../util/markdown' 
+import dummyAd from '../assets/ad.png'
+
 
 const PlanPage: React.FC<{
   idx: number;
@@ -46,7 +49,8 @@ const PlanPage: React.FC<{
       lookId = pane.lookUid;
     }
     if (pane.translations) {
-      caption = pane.translations.en;
+      caption = parseParagraphs(pane.translations.en);
+
     }
   }
   let look = lookbookData.looks.find((look) => {
@@ -80,7 +84,9 @@ const PlanPage: React.FC<{
       {caption && (
         <div className="text-section text-section--plan">
           <div className="gradient-overlay gradient-overlay--plan"></div>
-          <div className="description">{caption}</div>
+          <div className="description" dangerouslySetInnerHTML={{__html: caption}}></div>
+          {/* <div className="description">{caption}</div> */}
+
           <div className="scroll-up">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +184,7 @@ const PlanPage: React.FC<{
         </div>
       )}
       <div className="ad-container">
-        <div className="display-ad"> 360 x 250</div>
+        <div className="display-ad"><img src={dummyAd} alt='advertisemt'/></div>
       </div>
     </motion.div>
   );
