@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import FrameOverlay from "./layout/FrameOverlay";
 import KbImage from "./KbImage";
 import bannerAd from '../assets/bannerAd.png'
+import {parseParagraphs} from '../util/markdown' 
 
 const CoverPage: React.FC<{
   lookbookData: lookbook;
@@ -48,6 +49,7 @@ const CoverPage: React.FC<{
 
   let imageUrl = look?.images[0].url;
 
+  let summary = parseParagraphs(lookbookData.summary.en); 
   return (
     <motion.div
       className="slide-container"
@@ -75,7 +77,6 @@ const CoverPage: React.FC<{
             alt="logo"
             style={{
               position: "absolute",
-              width: "10rem",
               top: `${width / 9}px`,
               left: `${width / 9}px`,
             }}
@@ -85,7 +86,7 @@ const CoverPage: React.FC<{
       <div className="text-section">
         <div className="gradient-overlay"></div>
         <div className="title">{lookbookData.title["en"]}</div>
-        <div className="description description-cover">{lookbookData.summary["en"]}</div>
+        <div className="description description-cover" dangerouslySetInnerHTML={{__html: summary}}></div>
         <div className="cta-readstory">
           READ THE STORY
           <svg

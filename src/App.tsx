@@ -82,6 +82,7 @@ function App() {
         return 0;
       }
     });
+
   }
 
   //swipe conditions
@@ -118,7 +119,6 @@ function App() {
         } else return 0;
       });
     }
-    // add your conditional logic here
   };
 
   return (
