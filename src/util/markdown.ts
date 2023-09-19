@@ -67,7 +67,6 @@ export function parseParagraphs(text: string) {
       }
     }
   }
-  console.log(result)
   return result;
 }
 
