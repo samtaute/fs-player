@@ -183,9 +183,9 @@ const PlanPage: React.FC<{
           </div>
         </div>
       )}
-      <div className="ad-container">
+      {/* <div className="ad-container">
         <div className="display-ad"><img src={dummyAd} alt='advertisemt'/></div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
